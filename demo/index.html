@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My PWA Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+	  
+    <!-- Alttaki satırlar index.html head bölümüne yapıştırın -->
+	  
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ABC App">
+    <meta name="msapplication-TileImage" content="https://thekocanlhk.github.io/2-project/demo/logo-144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+    <link rel="manifest" href="https://thekocanlhk.github.io/2-project/demo/manifest.json">
+    <link rel="apple-touch-icon" href="https://thekocanlhk.github.io/2-project/demo/logo-144.png">
+<script>
+ if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+   navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+    console.log('Registered!');
+   }, function (err) {
+    console.log('ServiceWorker registration failed: ', err);
+   }).catch(function (err) {
+    console.log(err);
+   });
+  });
+ } else {
+  console.log('service worker is not supported');
+ }
+</script>
+	  
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to My PWA Website</h1>  
+    </main>
+  </body>
+</html>
